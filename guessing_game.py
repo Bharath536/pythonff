@@ -5,6 +5,7 @@ while true:
     guss=int(input("enter your guss"))
     attempts+=1
 if(secret_number==guss):
+    score=10
     print("correct")
     print("attempts:",attempts)
     print("score:",score)
