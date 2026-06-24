@@ -1,25 +1,43 @@
+# 1. Factorial Function
 def factorial(n):
-    result=1
-    for i in range(1,n+1):
-        result*=i
-        return result
-print (factorial(7))
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
 
+print("Factorial of 5:", factorial(5))
+
+
+# 2. Palindrome Function
 def palindrome(text):
-    return text==text[::-1]
-print(palindrome("bharath"))
+    if text == text[::-1]:
+        return True
+    return False
 
-def area(radius):
-    return 3.45 * radius * radius
-print (area(8))
+print("Is 'madam' palindrome?", palindrome("madam"))
 
-def simple_interest(p,r,t):
-    return(p*r*t)/200
-print(simple_interest(199,3,9))
 
-def even_odd(num):
-    if num % 2==0:
-        return "even"
-    else:
-        return "odd"
-print(even_odd(5))
+# 3. Maximum of Three Numbers
+def maximum(a, b, c):
+    return max(a, b, c)
+
+print("Maximum:", maximum(10, 25, 15))
+
+
+# 4. Celsius to Fahrenheit
+def celsius_to_fahrenheit(c):
+    return (c * 9/5) + 32
+
+print("30 Celsius =", celsius_to_fahrenheit(30), "F")
+
+
+# 5. Count Vowels
+def count_vowels(text):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for ch in text:
+        if ch in vowels:
+            count += 1
+    return count
+
+print("Vowels in 'Python Programming':", count_vowels("Python Programming"))
